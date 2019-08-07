@@ -1,0 +1,38 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@using TesteGit.Models
+@model Pessoa
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6  offset-3">
+                <form action="/pessoa/formulario" method="post">
+
+                    <div class="form-group">
+                        <label for="Nome">Nome:</label>
+                        <input type="text" name="Nome" class="form-control" placeholder="Nome" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Telefone">Telefone:</label>
+                        <input type="text" name="Telefone" class="form-control" placeholder="Telefone" />
+                    </div>
+                    
+                    <section class="row justify-content-center mb-5">
+                        <input class="btn btn-lg btn-primary" type="submit" value="Cadastrar" />
+                    </section>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

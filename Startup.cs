@@ -29,6 +29,7 @@ namespace TesteGit
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+            services.AddMvc();
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
@@ -41,15 +42,12 @@ namespace TesteGit
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseExceptionHandler("/Error");
-            }
+           
+                     
+           
+            app.UseMvcWithDefaultRoute();
 
-            app.UseStaticFiles();
-            app.UseCookiePolicy();
-
-            app.UseMvc();
+            
         }
     }
 }
